@@ -1,24 +1,13 @@
+<!-- post.html-->
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>
-        欢迎光临我的博客
-    </title>
-</head>
-<body>
-    <h1>
-        {{ post.title }}
-    </h1>
-    <hr>
-        <p style="font-family:微软雅黑;font-size:12pt;letter-spacing:2pt;">
-            {{ post.body }}
+{% extends 'base.html' %}
+{% block title %} {{ post.title }} - 文学天地 {% endblock %}
+{% block headmessage %}
+    <h3 style="font-family:微软雅黑;">{{ post.title }}</h3>
+    <a style="font-family:微软雅黑;" href="/">回首页</a>
+{% endblock %}
+{% block content %}
+    <p style="font-family:微软雅黑;font-size:12pt;letter-spacing:2pt;">
+        {{ post.title }}</a>
         </p>
-    <hr>
-    <h3>
-        <a href="/">
-            回首页
-        </a>
-    </h3>
-</body>
-</html>
+{% endblock %}
